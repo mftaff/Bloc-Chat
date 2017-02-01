@@ -1,1 +1,7 @@
-<h1>Home Page</h1>
+<main>
+    <h1>Home Page</h1>
+    <section class="rooms" ng-repeat="room in home.rooms">
+        <div class="room">{{ room.$value }}</div>
+    </section>
+    <h3>Test</h3>
+</main>
