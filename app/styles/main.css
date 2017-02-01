@@ -17,8 +17,27 @@ header {
 }
 
 header h1 {
-    text-align: center;
-    font-size: 2em;
+    position: relative;
+    margin-left: 5px;
+    font-size: 1.5em;
+}
+
+header button {
+    position: relative;
+    margin-left: 5px;
+    background-color: floralwhite;
+    border-radius: 8%;
+    border: 2px outset beige;
+}
+
+header button:hover {
+    cursor: pointer;
+    border: 2px outset rgb(147, 223, 248);
+}
+
+header button:active {
+    border: 2px inset beige;
+    top: 1px;
 }
 
 nav {
@@ -30,6 +49,7 @@ nav {
 }
 
 .rooms {
+    position: relative;
     margin: 5px;
 }
 
