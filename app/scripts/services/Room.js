@@ -5,12 +5,12 @@
         
         return {
             all: rooms,
-//            newRoom: function($uibModal) {
-//                return $uibModal.open({
-//                    templateUrl: "/templates/modal.html", 
-//                    controller: 'ModalCtrl as modal'
-//                });
-//            },
+            newRoom: function($uibModal) {
+                return $uibModal.open({
+                    templateUrl: "/templates/modal.html", 
+                    controller: 'ModalCtrl as modal'
+                });
+            },
             saveRoom: function(roomName) {
                 rooms.$add( {name: roomName} );
             },

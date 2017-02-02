@@ -2,7 +2,7 @@
     function ModalCtrl(Room) {
         this.saveRoom = function(roomName) {
             Room.saveRoom(roomName);
-//            Room.closeModal(Room.newRoom;
+            Room.closeModal(Room.newRoom);
         };
     }
     
