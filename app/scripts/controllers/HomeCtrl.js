@@ -10,7 +10,7 @@
 //                controller: 'ModalCtrl as modal'
 //            });
 //        };
-//    }
+    }
     
     angular
         .module('blocChat')

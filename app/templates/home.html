@@ -4,8 +4,10 @@
             <h1>Bloc Chat</h1>
             <button ng-click="home.openModal()">New Room</button>
         </header> 
-        <section class="rooms" ng-repeat="room in home.rooms">
-            <div class="room">{{ room.name }}</div>
+        <section class="openChats">
+            <div class="rooms" ng-repeat="room in home.rooms">
+                <div class="room">{{ room.name }}</div>
+            </div>
         </section>
         <section class=room>
 

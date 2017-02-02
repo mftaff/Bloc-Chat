@@ -3,10 +3,12 @@
         var ref = firebase.database().ref().child('rooms');
         var rooms = $firebaseArray(ref);
         
+        this.modalInstance = undefined;
+        
         return {
             all: rooms,
             newRoom: function($uibModal) {
-                return $uibModal.open({
+                this.modalInstance = $uibModal.open({
                     templateUrl: "/templates/modal.html", 
                     controller: 'ModalCtrl as modal'
                 });
