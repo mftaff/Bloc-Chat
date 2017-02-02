@@ -4,7 +4,19 @@
         var rooms = $firebaseArray(ref);
         
         return {
-            all: rooms
+            all: rooms,
+//            newRoom: function($uibModal) {
+//                return $uibModal.open({
+//                    templateUrl: "/templates/modal.html", 
+//                    controller: 'ModalCtrl as modal'
+//                });
+//            },
+            saveRoom: function(roomName) {
+                rooms.$add( {name: roomName} );
+            },
+            closeModal: function(modalInstance) {
+                modalInstance.close();
+            }
         };
     }
     
