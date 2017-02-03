@@ -1,8 +1,11 @@
 (function() {
     function HomeCtrl(Room, $uibModal) {
         this.rooms = Room.all;
-        this.openModal = function() {
+        this.roomModal = function() {
             Room.newRoom($uibModal);
+        };
+        this.deleteModal = function(roomToDelete) {
+            Room.confirmDelete($uibModal, roomToDelete);
         };
 //        this.openModal = function() {
 //            $uibModal.open({

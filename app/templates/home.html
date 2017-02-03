@@ -2,11 +2,14 @@
     <nav>
         <header>
             <h1>Bloc Chat</h1>
-            <button ng-click="home.openModal()">New Room</button>
+            <button ng-click="home.roomModal()">New Room</button>
         </header> 
         <section class="openChats">
             <div class="rooms" ng-repeat="room in home.rooms">
-                <div class="room">{{ room.name }}</div>
+                <div class="room">
+                    {{ room.name }}
+                    <div class="deleteRoom" ng-click="home.deleteModal(room)">Delete</div>
+                </div>
             </div>
         </section>
         <section class=room>

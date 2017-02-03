@@ -54,6 +54,27 @@ nav {
 .rooms {
     position: relative;
     margin: 5px;
+    padding: 5px;
+    border: 2px ridge #cbf59a;
+    border-radius: 10%;
+}
+
+.deleteRoom {
+    position: absolute;
+    right: 3%;
+    top: 10%;
+    font-size: .9rem; 
+}
+
+.deleteRoom:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.38);
+    padding: 1px;
+    border-radius: 30%;
+}
+
+.deleteRoom:active {
+    top: 12%;
 }
 
 footer {

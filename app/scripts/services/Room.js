@@ -3,18 +3,26 @@
         var ref = firebase.database().ref().child('rooms');
         var rooms = $firebaseArray(ref);
         
-        this.modalInstance = undefined;
-        
         return {
             all: rooms,
             newRoom: function($uibModal) {
                 this.modalInstance = $uibModal.open({
-                    templateUrl: "/templates/modal.html", 
+                    templateUrl: "/templates/modals/newRoomModal.html", 
+                    controller: 'ModalCtrl as modal'
+                });
+            },
+            confirmDelete: function($uibModal, roomToDelete) {
+                this.roomToDelete = roomToDelete;
+                this.modalInstance = $uibModal.open({
+                    templateUrl: "/templates/modals/delRoomModal.html", 
                     controller: 'ModalCtrl as modal'
                 });
             },
             saveRoom: function(roomName) {
                 rooms.$add( {name: roomName} );
+            },
+            deleteRoom: function(toDelete) {
+                rooms.$remove(toDelete);
             },
             closeModal: function(modalInstance) {
                 modalInstance.close();
