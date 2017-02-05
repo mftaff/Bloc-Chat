@@ -9,8 +9,10 @@
             Room.confirmDelete($uibModal, roomToDelete);
         };
         this.viewRoom = function(newRoom) {
-            this.openRoom = Room.viewRoom(newRoom);  
+            this.openRoom = Room.viewRoom(newRoom);
+            
         };
+        this.messages = Message.all;
     }
     
     angular

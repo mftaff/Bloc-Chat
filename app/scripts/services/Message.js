@@ -4,6 +4,7 @@
         var messages = $firebaseArray(ref);
 
         return {
+            all: messages,
             getByRoomId: function (roomId) {
             // Filter the messages by their room ID.
             }

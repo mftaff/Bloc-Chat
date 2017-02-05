@@ -137,6 +137,29 @@ footer h3 {
     overflow: auto;
 }
 
+.room-content .messages {
+    position: relative;
+    margin: 4px;
+    padding: 2px;
+    border: 2px outset #f0e1c2;
+}
+
+.messages .username {
+    font-size: 1rem;
+    background-color: #f4d89f
+}
+
+.messages .content {
+    margin: 3px;
+    padding-left: 2%;
+}
+
+.messages .time {
+    position: absolute;
+    bottom: 8%;
+    right: 1%;
+}
+
 .room-content .footer {
     position: absolute;
     width: 100%;
