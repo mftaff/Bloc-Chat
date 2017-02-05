@@ -6,7 +6,15 @@
         return {
             all: messages,
             getByRoomId: function (roomId) {
-            // Filter the messages by their room ID.
+                var roomMessages = [];
+                
+                messages.forEach(function(message) {
+                     if (message.roomId === roomId) {
+                         roomMessages.push(message);
+                     }                    
+                });
+                
+                return roomMessages;
             }
         };
     }
