@@ -26,6 +26,9 @@
             },
             closeModal: function(modalInstance) {
                 modalInstance.close();
+            },
+            viewRoom: function(newRoom) {
+                return newRoom;
             }
         };
     }

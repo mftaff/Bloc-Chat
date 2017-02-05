@@ -4,19 +4,26 @@
             <h1>Bloc Chat</h1>
             <button ng-click="home.roomModal()">New Room</button>
         </header> 
-        <section class="openChats">
+        <section class="open-chats">
             <div class="rooms" ng-repeat="room in home.rooms">
-                <div class="room">
+                <div class="room" ng-click="home.viewRoom(room.name)">
                     {{ room.name }}
-                    <div class="deleteRoom" ng-click="home.deleteModal(room)">Delete</div>
+                    <div class="delete-room" ng-click="home.deleteModal(room)">Delete</div>
                 </div>
             </div>
-        </section>
-        <section class=room>
-
         </section>
         <footer>
             <h3>Test</h3>
         </footer>
     </nav>
+    <section class="room-content">
+        <div class="room-name">
+            <h2>{{ home.openRoom }}</h2>
+        </div>
+        <div class="custom-border-style"></div>
+        <div class="message-window">
+            
+        </div>
+        <div class="footer"></div>
+    </section>
 </main>
