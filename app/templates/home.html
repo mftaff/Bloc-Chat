@@ -22,7 +22,8 @@
         </div>
         <div class="custom-border-style"></div>
         <div class="message-window">
-            
+            <div class="messages" ng-repeat="message in home.messages"></div>
+                <div class="message">{{ message.content }}</div>
         </div>
         <div class="footer"></div>
     </section>
