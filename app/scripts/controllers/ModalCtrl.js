@@ -1,5 +1,5 @@
 (function () {
-    function ModalCtrl(Room) {
+    function ModalCtrl(Room, $uibModalInstance) {
         this.saveRoom = function(roomName) {
             Room.saveRoom(roomName);
             this.closeModal();
@@ -9,14 +9,14 @@
             this.closeModal();
         };
         this.closeModal = function() {
-            Room.closeModal(Room.modalInstance);
+            Room.closeModal($uibModalInstance);
         };
         this.checkUser = function(newUsername) {
-            return Room.checkUser(newUsername);  
+            return Room.checkUser(newUsername);
         };
     }
     
     angular 
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', ModalCtrl]);
+        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
 })();
