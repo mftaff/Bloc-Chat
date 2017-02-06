@@ -18,6 +18,14 @@
                     controller: 'ModalCtrl as modal'
                 });
             },
+            setUser: function($uibModal) {
+                this.modalInstance = $uibModal.open({
+                templateUrl: "/templates/modals/usernameModal.html", 
+                controller: 'ModalCtrl as modal' ,
+                backdrop: 'static',
+                keyboard: 'false'
+                });
+            },
             saveRoom: function(roomName) {
                 rooms.$add( {name: roomName} );
             },
@@ -29,6 +37,11 @@
             },
             viewRoom: function(newRoom) {
                 return newRoom;
+            },
+            checkUser: function(username) {
+                if (username === "") return true;
+                if (/\S/.test(username)) return false;
+                return true;
             }
         };
     }

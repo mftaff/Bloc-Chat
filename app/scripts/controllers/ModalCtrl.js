@@ -11,6 +11,9 @@
         this.closeModal = function() {
             Room.closeModal(Room.modalInstance);
         };
+        this.checkUser = function(newUsername) {
+            return Room.checkUser(newUsername);  
+        };
     }
     
     angular 

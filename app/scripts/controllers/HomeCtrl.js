@@ -3,6 +3,7 @@
         this.rooms = Room.all;
         this.messages = [];
         this.openRoom = "[Click on a Room to display]";
+        
         this.roomModal = function() {
             Room.newRoom($uibModal);
         };
