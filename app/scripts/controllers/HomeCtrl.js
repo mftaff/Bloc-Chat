@@ -1,7 +1,6 @@
 (function() {
     function HomeCtrl(Room, Message, $uibModal) {
         this.rooms = Room.all;
-        this.messages = [];
         this.openRoom = "[Click on a Room to display]";
         
         this.roomModal = function() {
