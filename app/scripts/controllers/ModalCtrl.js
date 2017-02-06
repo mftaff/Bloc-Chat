@@ -14,6 +14,10 @@
         this.checkUser = function(newUsername) {
             return Room.checkUser(newUsername);
         };
+        this.setUser = function(user) {
+            Room.setUser(user);
+            this.closeModal();
+        };
     }
     
     angular 
