@@ -2,7 +2,7 @@
     <nav>
         <header>
             <h1>Bloc Chat</h1>
-            <button ng-click="home.roomModal()">New Room</button>
+            <button id="new-room" ng-click="home.roomModal()">New Room</button>
         </header> 
         <section class="open-chats">
             <div class="rooms" ng-repeat="room in home.rooms">
@@ -25,8 +25,16 @@
             <div class="messages" ng-repeat="message in home.messages">
                 <div class="username">{{ message.username }}</div>
                 <div class="content">{{ message.content }}</div>
-                <div class="time">{{ message.sentAt }}</div>
+                <div class="time-wrap">
+                    <div class="time">{{ message.sentAt }}</div>
+                </div>
             </div>
+        </div>
+        <div class="send-message">
+            <form>
+                <textarea rows="3" id="message-field" ng-model="message" placeholder="New message..."></textarea>
+                <input id="enter" type="submit" value="Enter" ng-click="home.sendMessage(message)">
+            </form> 
         </div>
         <div class="footer"></div>
     </section>

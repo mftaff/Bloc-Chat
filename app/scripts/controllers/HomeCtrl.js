@@ -10,8 +10,12 @@
             Room.confirmDelete($uibModal, roomToDelete);
         };
         this.viewRoom = function(room) {
+            this.currentRoomId = room.$id;
             this.openRoom = Room.viewRoom(room.name);
             this.messages = Message.getByRoomId(room.$id);
+        };
+        this.sendMessage = function(message, currentRoom) {
+            Message.send(message, Room.getCurrentUser(), this.currentRoomId);
         };
     }
     

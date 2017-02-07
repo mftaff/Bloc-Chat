@@ -41,6 +41,9 @@
             },
             setUser: function(user) {
                 $cookies.put("blocChatCurrentUser", user);
+            },
+            getCurrentUser: function() {
+                return $cookies.get("blocChatCurrentUser");
             }
         };
     }

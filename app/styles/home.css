@@ -4,7 +4,9 @@ nav {
     top: 0%;
     width: 30%;
     height: 100%;
+/*    border-right: 1px outset black;*/
     background-color: rgb(147, 223, 248);
+    box-shadow: 3px 1px 6px #849595;
 }
 
 header {
@@ -25,22 +27,22 @@ header h1 {
     font-size: 1.5em;
 }
 
-header button {
+header #new-room {
     position: absolute;
     right: 0;
     top: 60%;
     margin-right: 5px;
-    background-color: floralwhite;
+    background-color: lightblue;
     border-radius: 8%;
-    border: 2px outset beige;
-}
-
-header button:hover {
-    cursor: pointer;
     border: 2px outset rgb(147, 223, 248);
 }
 
-header button:active {
+header #new-room:hover {
+    cursor: pointer;
+    border: 2px outset rgb(133, 217, 245);
+}
+
+header #new-room:active {
     border: 2px inset beige;
     top: 61%;
 }
@@ -99,11 +101,12 @@ footer h3 {
 
 .room-content {
     position: absolute;
-    width: 68%;
-    height: 98%;
-    top: 1%;
-    left: 31%;
+    width: 60%;
+    height: 90%;
+    top: 2%;
+    left: 35%;
     border: 2px solid #f0e1c2; 
+    background-color: floralwhite;
     border-radius: 5%;
     overflow: hidden;
 }
@@ -152,12 +155,24 @@ footer h3 {
 .messages .content {
     margin: 3px;
     padding-left: 2%;
+    width: 83%;
+    min-height: 40px;
+}
+
+.messages .time-wrap {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 15%;
+    height: 100%;
+    background-color: rgba(244, 216, 159, 0.1)
 }
 
 .messages .time {
     position: absolute;
-    bottom: 8%;
-    right: 1%;
+    bottom: 1%;
+    margin: 2px;
+    opacity: 0.5;
 }
 
 .room-content .footer {
@@ -166,4 +181,44 @@ footer h3 {
     bottom: 0%;
     height: 5%;
     background-color: #f0e1c2;
+}
+
+.send-message {
+    position: absolute;
+    bottom: 5.5%;
+    height: 8%;
+    left: .5%;
+    width: 99%;
+    background-color: white;
+}
+
+.send-message #message-field {
+    position: absolute;
+    width: 85%;
+    border: none;
+}
+
+.send-message #enter {
+    position: absolute;
+    width: 10%;
+    left: 87.5%;
+    top: 20%;
+    border: none;
+    background-color: floralwhite;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    border-radius: 10%;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.send-message #enter:hover {
+    cursor: pointer;
+    background-color: #ede3cf;
+    color: rgba(0, 0, 0, 0.8);
+    transition: .1s;
+}
+
+.send-message #message-field:focus {
+    outline: none;
 }
