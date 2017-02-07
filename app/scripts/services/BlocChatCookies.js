@@ -8,10 +8,6 @@
                 backdrop: 'static',
                 keyboard: false
                 });
-//                .result.then(function(newUsername) {
-//                    console.log(newUsername);
-//                    $cookies.put("blocChatCurrentUser", newUsername);
-//                });
         }
     }
 

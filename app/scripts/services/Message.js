@@ -28,9 +28,9 @@
                     }
 
                     if (hr <= 11) {
-                        amPm = "am";
+                        amPm = " am";
                     } else {
-                        amPm = "pm";
+                        amPm = " pm";
                     }
 
                     if (min < 10) {

@@ -14,7 +14,7 @@
             this.openRoom = Room.viewRoom(room.name);
             this.messages = Message.getByRoomId(room.$id);
         };
-        this.sendMessage = function(message, currentRoom) {
+        this.sendMessage = function(message) {
             Message.send(message, Room.getCurrentUser(), this.currentRoomId);
         };
     }
